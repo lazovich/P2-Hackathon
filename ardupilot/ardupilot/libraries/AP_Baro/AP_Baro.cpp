@@ -91,7 +91,8 @@ void AP_Baro::calibrate()
     // let the barometer settle for a full second after startup
     // the MS5611 reads quite a long way off for the first second,
     // leading to about 1m of error if we don't wait
-    for (uint8_t i = 0; i < 10; j++) {
+    // NOTE: FIXED BY HAND TO ALLOW CODE TO COMPILE
+    for (uint8_t i = 0; i < 10; i++) {
         uint32_t tstart = hal.scheduler->millis();
         do {
             update();

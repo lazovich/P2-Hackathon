@@ -169,11 +169,13 @@ AP_BattMonitor::read()
         return;
     }
 
-    for (uint8_t i=0; i<=AP_BATT_MONITOR_MAX_INSTANCES; i++) {
+    // NOTE: Commented out by hand to allow for compile
+    // Fixed compile error due to compile flag for aggressive loop optimization
+    /*for (uint8_t i=0; i<=AP_BATT_MONITOR_MAX_INSTANCES; i++) {
         if (drivers[i] != NULL && _monitoring[i] != BattMonitor_TYPE_NONE) {
             drivers[i]->read();
         }
-    }
+    }*/
 }
 
 // healthy - returns true if monitor is functioning
