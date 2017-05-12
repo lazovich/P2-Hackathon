@@ -192,6 +192,7 @@ void MAVLink_routing::send_to_components(const mavlink_message_t* msg)
 /*
   send a MAVLink message on all channels
 */
+// Flagged by classifier as suspect (verified by human)
 void MAVLink_routing::send_on_all_channels(const mavlink_message_t* msg)
 {
     bool sent_to_chan[MAVLINK_COMM_NUM_BUFFERS];
@@ -211,6 +212,7 @@ void MAVLink_routing::send_on_all_channels(const mavlink_message_t* msg)
 /*
   see if the message is for a new route and learn it
 */
+// Flagged as suspect by classifier (verified by human)
 void MAVLink_routing::learn_route(mavlink_channel_t in_channel, const mavlink_message_t* msg)
 {
     uint8_t i;

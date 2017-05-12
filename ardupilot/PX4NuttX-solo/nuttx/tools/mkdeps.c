@@ -351,6 +351,7 @@ static void parse_args(int argc, char **argv)
 #endif
 }
 
+// Flagged as suspect by classifier (verified by human)
 static void do_dependency(const char *file, char separator)
 {
   static const char moption[] = " -M ";

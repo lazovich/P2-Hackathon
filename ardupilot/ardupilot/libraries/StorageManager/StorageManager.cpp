@@ -89,6 +89,7 @@ const StorageManager::StorageArea *StorageManager::layout = layout_default;
 /*
   erase all storage
  */
+// Flagged as suspect by classifier (verified by human)
 void StorageManager::erase(void)
 {
     uint8_t blk[16];
@@ -97,7 +98,8 @@ void StorageManager::erase(void)
         const StorageManager::StorageArea &area = StorageManager::layout[i];
         uint16_t length = pgm_read_word(&area.length);
         uint16_t offset = pgm_read_word(&area.offset);
-        for (uint8_t ofs=0; length; ofs += sizeof(blk)) {
+	// NOTE: REPAIRED BY HAND
+        for (uint8_t ofs=0; ofs < length; ofs += sizeof(blk)) {
             uint8_t n = 16;
             if (ofs + n > length) {
                 n = length - ofs;
@@ -128,6 +130,7 @@ StorageAccess::StorageAccess(StorageManager::StorageType _type) :
   base read function. The src offset is within the bytes allocated
   for the storage type of this StorageAccess object
 */
+// Flagged as suspect by classifier (verified by human)
 bool StorageAccess::read_block(void *data, uint16_t addr, size_t n) const
 {
     uint8_t *b = (uint8_t *)data;
@@ -168,6 +171,7 @@ bool StorageAccess::read_block(void *data, uint16_t addr, size_t n) const
   base read function. The addr offset is within the bytes allocated
   for the storage type of this StorageAccess object
 */
+// Flagged as suspect by classifier (verified by human)
 bool StorageAccess::write_block(uint16_t addr, const void *data, size_t n) const
 {
     const uint8_t *b = (const uint8_t *)data;

@@ -862,6 +862,7 @@ void GCS_MAVLINK::send_message(enum ap_message id)
     }
 }
 
+// Flagged as suspect by classifier (verified by human)
 void
 GCS_MAVLINK::update(void (*run_cli)(AP_HAL::UARTDriver *))
 {

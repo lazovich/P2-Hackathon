@@ -50,6 +50,7 @@ void GCS_MAVLINK::handle_log_message(mavlink_message_t *msg, DataFlash_Class &da
 /**
    handle all types of log download requests from the GCS
  */
+// Flagged as suspect by classifier (verified by human)
 void GCS_MAVLINK::handle_log_request_list(mavlink_message_t *msg, DataFlash_Class &dataflash)
 {
     mavlink_log_request_list_t packet;

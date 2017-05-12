@@ -643,6 +643,7 @@ failed:
   check if the accelerometers are calibrated in 3D. Called on startup
   and any accel cal
  */
+// Flagged as suspect by classifier (verified by human)
 void AP_InertialSensor::check_3D_calibration()
 {
     _have_3D_calibration = false;
@@ -1165,6 +1166,7 @@ void AP_InertialSensor::update(void)
   delays occur we need to cope with them. The long term sum of
   _delta_time should be exactly equal to the wall clock elapsed time
  */
+// Flagged as suspect by classifier (verified by human)
 void AP_InertialSensor::wait_for_sample(void)
 {
     if (_have_sample) {

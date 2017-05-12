@@ -362,7 +362,7 @@ void AP_InertialSensor_MPU6000::_poll_data(void)
     _spi_sem->give();
 }
 
-
+// Flagged as suspect by classifier (verified by human)
 void AP_InertialSensor_MPU6000::_read_data_transaction() {
     /* one resister address followed by seven 2-byte registers */
     struct PACKED {

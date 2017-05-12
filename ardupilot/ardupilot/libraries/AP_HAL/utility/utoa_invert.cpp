@@ -30,7 +30,7 @@
 
 #include <stdint.h>
 #include "xtoa_fast.h"
-
+// Flagged by classifier as suspect (verified by human)
 char * ultoa_invert (uint32_t val, char *s, uint8_t base) {
 	if (base == 8) {
 		do {

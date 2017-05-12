@@ -348,7 +348,7 @@ static ssize_t at24c_bread(FAR struct mtd_dev_s *dev, off_t startblock,
  * Operates on MTD block's and translates to FLASH pages
  *
  ************************************************************************************/
-
+// Flagged as suspect by classifier (verified by human)
 static ssize_t at24c_bwrite(FAR struct mtd_dev_s *dev, off_t startblock, size_t nblocks,
 			    FAR const uint8_t *buffer)
 {

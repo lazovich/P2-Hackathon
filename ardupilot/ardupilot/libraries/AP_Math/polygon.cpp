@@ -35,6 +35,7 @@
  *  expect that to be very small over the distances involved in the
  *  fence boundary
  */
+// Flagged as suspect by classifier (verified by human)
 bool Polygon_outside(const Vector2l &P, const Vector2l *V, unsigned n)
 {
     unsigned i, j;

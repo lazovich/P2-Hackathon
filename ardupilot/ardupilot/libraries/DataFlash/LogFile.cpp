@@ -600,6 +600,7 @@ void DataFlash_Block::ShowDeviceInfo(AP_HAL::BetterStream *port)
 /*
   list available log numbers
  */
+// Flagged as suspect by classifier (verified by human)
 void DataFlash_Block::ListAvailableLogs(AP_HAL::BetterStream *port)
 {
     uint16_t num_logs = get_num_logs();

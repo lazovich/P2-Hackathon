@@ -366,7 +366,7 @@ void CompassCalibrator::thin_samples() {
         }
     }
 }
-
+// Flagged as suspect by classifier (verified by human)
 bool CompassCalibrator::accept_sample(const Vector3f& sample)
 {
     if(_sample_buffer == NULL) {

@@ -39,6 +39,7 @@ bool AP_InertialSensor_UserInteract_MAVLink::blocking_read(void)
     return false;
 }
 
+//Flagged as suspect by classifier (verified by human)
 void AP_InertialSensor_UserInteract_MAVLink::_printf_P(const prog_char* fmt, ...) 
 {
     char msg[50];

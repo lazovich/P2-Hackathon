@@ -173,7 +173,7 @@ int16_t AP_GPS_NMEA::_from_hex(char a)
     else
         return a - '0';
 }
-
+//Flagged as suspect by classifier (verified by human)
 uint32_t AP_GPS_NMEA::_parse_decimal_100()
 {
     char *p = _term;

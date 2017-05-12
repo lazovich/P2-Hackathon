@@ -380,6 +380,7 @@ void AC_WPNav::wp_and_spline_init()
 }
 
 /// set_speed_xy - allows main code to pass target horizontal velocity for wp navigation
+// Flagged as suspect by classifier (verified by human)
 void AC_WPNav::set_speed_xy(float speed_cms)
 {
     // range check new target speed and update position controller

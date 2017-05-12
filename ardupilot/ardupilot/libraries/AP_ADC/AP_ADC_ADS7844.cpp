@@ -215,6 +215,7 @@ bool AP_ADC_ADS7844::new_data_available(const uint8_t *channel_numbers)
 // equal. This will only be true if we always consistently access a
 // sensor by either Ch6() or Ch() and never mix them. If you mix them
 // then you will get very strange results
+// Flagged as suspect by classifier (verified by human)
 uint32_t AP_ADC_ADS7844::Ch6(const uint8_t *channel_numbers, float *result)
 {
     uint16_t count[6];

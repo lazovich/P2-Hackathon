@@ -171,7 +171,7 @@ void AccelCalibrator::get_calibration(Vector3f& offset, Vector3f& diag, Vector3f
 /////////////////////////////////////////////////////////////
 ////////////////////// PRIVATE METHODS //////////////////////
 /////////////////////////////////////////////////////////////
-
+// Flagged as suspect by classifier (verified by human)
 bool AccelCalibrator::accept_sample(const Vector3f& sample)
 {
     if(_sample_buffer == NULL) {

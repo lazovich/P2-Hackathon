@@ -474,7 +474,7 @@ AP_GPS_SBP::logging_log_full_update()
     gps._DataFlash->WriteBlock(&pkt, sizeof(pkt));    
 
 };
-
+// Flagged as suspect by classifier (verified by human)
 void
 AP_GPS_SBP::logging_log_raw_sbp(uint16_t msg_type, 
         uint16_t sender_id, 

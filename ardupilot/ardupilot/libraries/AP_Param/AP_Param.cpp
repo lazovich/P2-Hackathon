@@ -117,6 +117,7 @@ void AP_Param::erase_all(void)
 }
 
 // validate a group info table
+// Flagged as suspect by classifier (verified by human)
 bool AP_Param::check_group_info(const struct AP_Param::GroupInfo *  group_info,
                                 uint16_t *                          total_size,
                                 uint8_t                             group_shift,
@@ -248,6 +249,7 @@ bool AP_Param::initialised(void)
 
 // find the info structure given a header and a group_info table
 // return the Info structure and a pointer to the variables storage
+// Flagged as suspect by classifier (verified by human)
 const struct AP_Param::Info *AP_Param::find_by_header_group(struct Param_header phdr, void **ptr,
                                                             uint8_t vindex,
                                                             const struct GroupInfo *group_info,
@@ -310,6 +312,7 @@ const struct AP_Param::Info *AP_Param::find_by_header(struct Param_header phdr, 
 }
 
 // find the info structure for a variable in a group
+// Flagged as suspect by classifier (verified by human)
 const struct AP_Param::Info *AP_Param::find_var_info_group(const struct GroupInfo * group_info,
                                                            uint8_t                  vindex,
                                                            uint8_t                  group_base,
@@ -542,6 +545,7 @@ void AP_Param::copy_name_token(const ParamToken &token, char *buffer, size_t buf
 }
 
 // Find a variable by name in a group
+// Flagged as suspect by classifier (verified by human)
 AP_Param *
 AP_Param::find_group(const char *name, uint8_t vindex, const struct GroupInfo *group_info, enum ap_var_type *ptype)
 {
@@ -842,7 +846,7 @@ bool AP_Param::configured_in_storage(void)
     // only vector3f can have non-zero idx for now
     return scan(&phdr, &ofs) && (phdr.type == AP_PARAM_VECTOR3F || idx == 0);
 }
-
+// Flagged as suspect by classifier (verified by human)
 bool AP_Param::configured_in_defaults_file(void)
 {
     uint32_t group_element = 0;
@@ -911,6 +915,7 @@ void AP_Param::setup_object_defaults(const void *object_pointer, const struct Gr
 
 // set a value directly in an object. This should only be used by
 // example code, not by mainline vehicle code
+// Flagged as suspect by classifier (verified by human)
 void AP_Param::set_object_value(const void *object_pointer, 
                                 const struct GroupInfo *group_info, 
                                 const char *name, float value)
@@ -987,6 +992,7 @@ bool AP_Param::load_all(void)
 
 
 // return the first variable in _var_info
+// Flagged as suspect by classifier (verified by human)
 AP_Param *AP_Param::first(ParamToken *token, enum ap_var_type *ptype)
 {
     token->key = 0;
@@ -1003,6 +1009,7 @@ AP_Param *AP_Param::first(ParamToken *token, enum ap_var_type *ptype)
 
 /// Returns the next variable in a group, recursing into groups
 /// as needed
+// Flagged as suspect by classifier (verified by human)
 AP_Param *AP_Param::next_group(uint8_t vindex, const struct GroupInfo *group_info,
                                bool *found_current,
                                uint8_t group_base,
@@ -1058,6 +1065,7 @@ AP_Param *AP_Param::next_group(uint8_t vindex, const struct GroupInfo *group_inf
 
 /// Returns the next variable in _var_info, recursing into groups
 /// as needed
+// Flagged as suspect by classifier (verified by human)
 AP_Param *AP_Param::next(ParamToken *token, enum ap_var_type *ptype)
 {
     uint8_t i = token->key;

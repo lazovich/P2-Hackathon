@@ -362,6 +362,7 @@ AP_GPS::update_instance(uint8_t instance)
 /*
   update all GPS instances
  */
+// Flagged as suspect by classifier (verified by human)
 void
 AP_GPS::update(void)
 {

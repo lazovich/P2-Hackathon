@@ -208,6 +208,7 @@ static void parse_line(char *ptr, char **varname, char **varval)
     }
 }
 
+// Flagged as suspect by classifier (verified by human)
 static char *dequote_value(const char *varname, char *varval)
 {
   const char **dqnam;
